@@ -1,0 +1,27 @@
+{
+  "name": "strapi4-provider-email-aws-ses-sdk",
+  "version": "1.0.0",
+  "description": "AWS SES provider for Strapi 4",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "strapi",
+    "email",
+    "provider",
+    "ses"
+  ],
+  "files": [
+    "./src"
+  ],
+  "repository": "https://github.com/MadAppGang/strapi4-provider-email-aws-ses-sdk.git",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.329.0",
+    "@strapi/utils": "^4.10.2",
+    "nodemailer": "^6.9.1"
+  },
+  "type": "module"
+}
