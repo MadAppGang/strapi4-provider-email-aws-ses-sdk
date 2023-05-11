@@ -1,8 +1,8 @@
-import nodemailer from "nodemailer";
-import aws from "@aws-sdk/client-ses";
-import { removeUndefined } from "@strapi/utils";
+const nodemailer = require("nodemailer");
+const aws = require("@aws-sdk/client-ses");
+const { removeUndefined } = require('strapi-utils');
 
-export default {
+module.exports = {
   provider: "strapi4-provider-email-aws-ses-sdk",
   name: "strapi4-provider-email-aws-ses-sdk",
 
