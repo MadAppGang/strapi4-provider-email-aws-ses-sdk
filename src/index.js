@@ -1,12 +1,13 @@
-const nodemailer = require("nodemailer");
+"use strict";
+
 const aws = require("@aws-sdk/client-ses");
-const { removeUndefined } = require('strapi-utils');
+const nodemailer = require("nodemailer");
 
 module.exports = {
   provider: "strapi4-provider-email-aws-ses-sdk",
   name: "strapi4-provider-email-aws-ses-sdk",
 
-  init(providerOptions, settings) {
+  init(providerOptions, settings){
     const ses = new aws.SES({
       apiVersion: "2010-12-01",
       region: providerOptions.region,
@@ -33,7 +34,8 @@ module.exports = {
           ...rest,
         };
 
-        await transporter.sendMail(removeUndefined(msg));
+        const info = await transporter.sendMail(msg);
+        return info;
       },
     };
   },
