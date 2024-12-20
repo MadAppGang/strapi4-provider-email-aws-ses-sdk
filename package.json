@@ -1,7 +1,7 @@
 {
   "name": "strapi4-provider-email-aws-ses-sdk",
-  "version": "1.0.2",
-  "description": "AWS SES provider for Strapi 4",
+  "version": "1.0.3",
+  "description": "AWS SES provider for Strapi",
   "keywords": [
     "strapi",
     "email",
@@ -27,7 +27,7 @@
     "nodemailer": "^6.9.1"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x",
+    "node": ">=14.x.x",
     "npm": ">=6.0.0"
   }
 }
